@@ -25,9 +25,6 @@ export function createMcpServer(options: McpServerOptions): {
   const server = new McpServer({
     name: options.metadata.name,
     version: options.metadata.version,
-    capabilities: {
-      tools: {},
-    },
   });
 
   const transport = new StdioServerTransport();

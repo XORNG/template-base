@@ -1,12 +1,12 @@
 import type {
   SubAgentMetadata,
   SubAgentConfig,
-  SubAgentConfigSchema,
   ToolDefinition,
   ProcessRequest,
   ProcessResponse,
   HealthStatus,
 } from '../types/index.js';
+import { SubAgentConfigSchema } from '../types/index.js';
 import { createLogger, type Logger } from '../utils/logger.js';
 import { validateSchema } from '../utils/validation.js';
 import { SubAgentError, ErrorCode, formatError } from '../utils/errors.js';
