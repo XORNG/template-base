@@ -83,7 +83,7 @@ export abstract class BaseTool<TInput, TOutput> {
   /**
    * Convert Zod schema definition to JSON schema
    */
-  private zodToJsonSchema(def: z.ZodTypeDef): Record<string, unknown> {
+  private zodToJsonSchema(def: z.ZodTypeAny): Record<string, unknown> {
     const typeName = (def as { typeName?: string }).typeName;
 
     switch (typeName) {
