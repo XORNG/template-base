@@ -1,4 +1,4 @@
-import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { ZodType } from 'zod';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 import type { SubAgentMetadata, ToolDefinition } from '../types/index.js';
@@ -22,7 +22,7 @@ export function createMcpServer(options: McpServerOptions): {
 } {
   const logger = createLogger(options.logLevel || 'info', options.metadata.name);
 
-  const server = new McpServer({
+  const server = new Server({
     name: options.metadata.name,
     version: options.metadata.version,
   });

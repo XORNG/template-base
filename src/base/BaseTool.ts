@@ -1,4 +1,4 @@
-import { z, ZodType } from 'zod';
+import { z } from 'zod';
 import type { ToolContext, ToolResult } from '../types/index.js';
 import { validateSchema } from '../utils/validation.js';
 import { SubAgentError, ErrorCode, formatError } from '../utils/errors.js';
@@ -83,7 +83,7 @@ export abstract class BaseTool<TInput, TOutput> {
   /**
    * Convert Zod schema definition to JSON schema
    */
-  private zodToJsonSchema(def: z.ZodTypeDef): Record<string, unknown> {
+  private zodToJsonSchema(def: z.ZodTypeAny): Record<string, unknown> {
     const typeName = (def as { typeName?: string }).typeName;
 
     switch (typeName) {
