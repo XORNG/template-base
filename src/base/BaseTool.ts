@@ -1,4 +1,4 @@
-import { ZodType } from 'zod';
+import { z } from 'zod';
 import type { ToolContext, ToolResult } from '../types/index.js';
 import { validateSchema } from '../utils/validation.js';
 import { SubAgentError, ErrorCode, formatError } from '../utils/errors.js';

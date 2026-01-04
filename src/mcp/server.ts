@@ -22,7 +22,7 @@ export function createMcpServer(options: McpServerOptions): {
 } {
   const logger = createLogger(options.logLevel || 'info', options.metadata.name);
 
-  const server = new McpServer({
+  const server = new Server({
     name: options.metadata.name,
     version: options.metadata.version,
   });
